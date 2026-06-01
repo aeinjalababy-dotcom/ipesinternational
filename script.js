@@ -1,5 +1,6 @@
 // Sticky Nav
 const nav = document.getElementById('nav');
+
 window.addEventListener('scroll', () => {
   if (window.scrollY > 60) {
     nav.classList.add('scrolled');
@@ -13,7 +14,9 @@ const hamburger = document.getElementById('hamburger');
 const navLinks = document.querySelector('.nav-links');
 
 hamburger.addEventListener('click', () => {
-  navLinks.style.display = navLinks.style.display === 'flex' ? 'none' : 'flex';
+  navLinks.style.display =
+    navLinks.style.display === 'flex' ? 'none' : 'flex';
+
   navLinks.style.flexDirection = 'column';
   navLinks.style.position = 'fixed';
   navLinks.style.top = '70px';
@@ -24,15 +27,6 @@ hamburger.addEventListener('click', () => {
   navLinks.style.boxShadow = '0 8px 32px rgba(26,52,9,0.14)';
   navLinks.style.gap = '18px';
 });
-
-// Form Submit
-function handleSubmit(e) {
-  e.preventDefault();
-  const success = document.getElementById('form-success');
-  success.classList.remove('hidden');
-  e.target.reset();
-  setTimeout(() => success.classList.add('hidden'), 5000);
-}
 
 // Scroll Reveal Animation
 const observerOptions = {
@@ -56,7 +50,9 @@ document.querySelectorAll(
 ).forEach(el => {
   el.style.opacity = '0';
   el.style.transform = 'translateY(30px)';
-  el.style.transition = 'opacity 0.7s ease, transform 0.7s cubic-bezier(0.22,1,0.36,1)';
+  el.style.transition =
+    'opacity 0.7s ease, transform 0.7s cubic-bezier(0.22,1,0.36,1)';
+
   observer.observe(el);
 });
 
@@ -66,14 +62,20 @@ const navAnchors = document.querySelectorAll('.nav-links a');
 
 window.addEventListener('scroll', () => {
   let current = '';
+
   sections.forEach(section => {
     const sectionTop = section.offsetTop - 120;
-    if (scrollY >= sectionTop) current = section.getAttribute('id');
+
+    if (window.scrollY >= sectionTop) {
+      current = section.getAttribute('id');
+    }
   });
-  navAnchors.forEach(a => {
-    a.style.color = '';
-    if (a.getAttribute('href') === `#${current}`) {
-      a.style.color = '#c8a040';
+
+  navAnchors.forEach(anchor => {
+    anchor.style.color = '';
+
+    if (anchor.getAttribute('href') === `#${current}`) {
+      anchor.style.color = '#c8a040';
     }
   });
 });
