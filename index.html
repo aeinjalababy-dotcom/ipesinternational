@@ -293,38 +293,71 @@
           <span class="cd-icon">📧</span>
           <div>
             <strong>Email</strong>
-            <p>ipesinternational@gmail.com</p>
+            <p>aeinjalababy@gmail.com</p>
           </div>
         </div>
         <div class="contact-detail">
           <span class="cd-icon">📞</span>
           <div>
             <strong>Phone</strong>
-            <p>+91 98XXX XXXXX</p>
+            <p>+91 95009 70560</p>
           </div>
         </div>
       </div>
     </div>
-    <form class="contact-form" onsubmit="handleSubmit(event)">
-      <div class="form-row">
-        <input type="text" placeholder="Your Name" required />
-        <input type="email" placeholder="Email Address" required />
-      </div>
-      <input type="text" placeholder="Company / Organization" />
-      <select>
-        <option value="" disabled selected>Product of Interest</option>
-        <option>Avocado</option>
-        <option>Ginger</option>
-        <option>Passion Fruit</option>
-        <option>Dragon Fruit</option>
-        <option>Banana</option>
-        <option>Arecanut</option>
-        <option>Multiple Products</option>
-      </select>
-      <textarea placeholder="Tell us about your requirements (volume, destination, packaging, etc.)" rows="5"></textarea>
-      <button type="submit" class="btn-primary">Send Enquiry →</button>
-      <div id="form-success" class="form-success hidden">✅ Thank you! We'll reach out within 24 hours.</div>
-    </form>
+<form
+  class="contact-form"
+  name="contact"
+  method="POST"
+  data-netlify="true"
+>
+  <input type="hidden" name="form-name" value="contact" />
+
+  <div class="form-row">
+    <input
+      type="text"
+      name="name"
+      placeholder="Your Name"
+      required
+    />
+
+    <input
+      type="email"
+      name="email"
+      placeholder="Email Address"
+      required
+    />
+  </div>
+
+  <input
+    type="text"
+    name="company"
+    placeholder="Company / Organization"
+  />
+
+  <select name="product">
+    <option value="" disabled selected>
+      Product of Interest
+    </option>
+    <option>Avocado</option>
+    <option>Ginger</option>
+    <option>Passion Fruit</option>
+    <option>Dragon Fruit</option>
+    <option>Banana</option>
+    <option>Arecanut</option>
+    <option>Multiple Products</option>
+  </select>
+
+  <textarea
+    name="requirements"
+    placeholder="Tell us about your requirements (volume, destination, packaging, etc.)"
+    rows="5"
+  ></textarea>
+
+  <button type="submit" class="btn-primary">
+    Send Enquiry →
+  </button>
+</form>
   </div>
 </section>
 
