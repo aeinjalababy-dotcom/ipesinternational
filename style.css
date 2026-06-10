@@ -725,6 +725,18 @@ img { display: block; width: 100%; object-fit: cover; }
   font-size: 14px;
   color: var(--text-light);
 }
+.whatsapp-link {
+  display: inline-block;
+  margin-top: 6px;
+  color: #25D366;
+  font-weight: 600;
+  text-decoration: none;
+  transition: 0.3s;
+}
+
+.whatsapp-link:hover {
+  text-decoration: underline;
+}
 
 .contact-form {
   background: var(--white);
